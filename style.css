@@ -1,0 +1,127 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #c9c9c9;
+}
+
+.robot {
+    position: relative;
+    width: 150px;
+    height: 300px;
+    animation: swing 2s infinite ease-in-out;
+}
+
+.head {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #ffd500;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    position: absolute;
+    top: 40px;
+}
+
+.eye {
+    width: 20px;
+    height: 20px;
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+.mouth {
+    width: 50px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.body {
+    width: 150px;
+    height: 100px;
+    background-color: #008cff;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    animation: swing 2s infinite ease-in-out;
+}
+
+.arms {
+    width: 30px;
+    height: 80px;
+    background-color: #835e00;
+    position: absolute;
+    top: 10px;
+    transform-origin: top;
+}
+
+.left {
+    left: -30px;
+    animation: armSwing 2s infinite ease-in-out;
+}
+
+.right {
+    right: -30px;
+    animation: armSwing 2s infinite ease-in-out reverse;
+}
+
+.legs {
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    animation: legSwing 2s infinite ease-in-out;
+}
+
+.leg {
+    width: 40px;
+    height: 50px;
+    background-color: #ffd500;
+    border-radius: 0 0 10px 10px;
+}
+
+.left {
+    animation: legSwing 1,5s infinite ease-in-out;
+}
+
+.right {
+    animation: legSwing 1s infinite ease-in-out reverse;
+}
+
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes armSwing {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(15deg); }
+}
+
+@keyframes legSwing {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+}
+
